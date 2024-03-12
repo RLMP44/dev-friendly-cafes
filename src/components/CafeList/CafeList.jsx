@@ -9,7 +9,7 @@ function CafeList({cafes}) {
 
   return (
     <div className='cafe-list'>
-      { cafes.map( cafe => <Cafe cafe={cafe} key={cafe} /> ) }
+      { cafes.map( cafe => <Cafe cafe={cafe} key={cafe.title} /> ) }
     </div>
   );
 }
