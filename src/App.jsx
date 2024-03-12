@@ -17,9 +17,12 @@ export default function App() {
   // takes 2 arguments, JS function and empty array
   React.useEffect(() => {
     const url = 'https://matcha-and-keyboard-f549965e60e7.herokuapp.com/api/v1/cafes';
-    fetch(url).then(response => response.json())
-    .then(data => {
-    setCafes(data);
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        console.log('calling api');
+      console.log(data);
+      setCafes(data);
     // don't need to iterate anymore
     // data.each( cafeData => {
     //   setCafes(cafeData);
