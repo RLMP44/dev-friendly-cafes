@@ -1,6 +1,6 @@
 import React from 'react';
 import "./Sidebar.css";
-import logo from '../../assets/logo_w_context2.png';
+import logo from '../../assets/logo_w_context.png';
 
 function Sidebar() {
   // TODO: build the addCafe feature
@@ -20,9 +20,9 @@ function Sidebar() {
             <span className="input-group-text" id="cafe-address"><i className="fa-solid fa-location-dot form-icons"></i></span>
             <input name="cafe[address]" placeholder="1-chome-11-1 Shibuya, Shibuya City, 150-0002, Tokyo, 150-0002, Tokyo" aria-describedby="cafe-address" type="address" className="form-control" />
           </div>
-          <div className="mb-3"> 
+          <div className="mb-3">
             { criteria.map((criterion) => {
-              return ( 
+              return (
                 <React.Fragment key={criterion}>
                   <input name="cafe[criteria][]" type="checkbox" className="btn-check" id={criterion} autoComplete="off" value={criterion}/>
                   <label className="btn btn-outline-success btn-sm mx-1 mb-1" htmlFor={criterion}>{criterion}</label>
